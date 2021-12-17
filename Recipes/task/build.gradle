@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+sourceSets.main.resources.srcDirs = ["resources"]
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:2.6.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.6.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.1'
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.1'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.1'
+    implementation 'org.springframework.boot:spring-boot-starter-security:2.6.1'
+
+    runtimeOnly 'com.h2database:h2:1.4.200'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+}
+
+repositories {
+    mavenCentral()
+}
